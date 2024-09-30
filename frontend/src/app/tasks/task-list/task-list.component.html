@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Lista de Tareas</h2>
+      <div>
+        <label class="form-label me-2">Filtro: </label>
+        <button class="btn btn-dark mb-1 me-2" (click)="setFilter(statusFilter.ALL)">Todos</button>
+        <button class="btn btn-dark mb-1 me-2" (click)="setFilter(statusFilter.COMPLETED)">Completados</button>
+        <button class="btn btn-dark mb-1 me-2" (click)="setFilter(statusFilter.PENDING)">Pendientes</button>
+      </div>
+      <ol class="list-group">
+        <li class="list-group-item" *ngFor="let task of tasks; let i = index">
+          <div class="form-check">
+            <input class="form-check-input checkbox-dark" type="checkbox" [ngModel]="task.status === statusFilter.COMPLETED"
+              (ngModelChange)="onStatusChange(task, $event)" id="task-{{ task.id }}">
+            <label class="form-check-label" for="task-{{ task.id }}">
+              <strong>{{ i + 1 }}.- {{ task.title }}</strong> - <small>{{ task.limitDate | date:'yyyy-MM-dd' }}</small>
+              <br>
+              <small>Personas Asociadas:</small>
+              <ul>
+                <li *ngFor="let person of task.persons">
+                  {{ person.fullName }} - ({{ person.age }}) <br>
+                  Habilidades:
+                  <span *ngFor="let skill of person.skills; let last = last">
+                    {{ skill.name }}<span *ngIf="!last">, </span>
+                  </span>
+                </li>
+              </ul>
+              <small>Estado: {{ task.status }}</small>
+            </label>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-dark me-2 mt-2 float-end" (click)="goBack()">Volver</button>
+  </div>
+</div>

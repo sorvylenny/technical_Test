@@ -1,0 +1,29 @@
+# Usamos una imagen de Node para construir la app
+FROM node:20 as build
+
+# Configurar el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar el package.json y package-lock.json para instalar dependencias
+COPY ./frontend/package*.json ./
+
+# Instalar dependencias del frontend
+RUN npm install --force
+
+# Copiar el código fuente del frontend
+COPY ./frontend .
+
+# Compilar la aplicación Angular
+RUN npm run build --prod
+
+# Fase de producción, usar Nginx para servir la app
+FROM nginx:alpine
+
+# Copiar los archivos de build al contenedor
+COPY --from=build /app/dist/Task-TestApp /usr/share/nginx/html
+
+# Exponer el puerto 80 para servir la aplicación
+EXPOSE 80
+
+# Comando para iniciar Nginx
+CMD ["nginx", "-g", "daemon off;"]

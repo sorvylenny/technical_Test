@@ -1,0 +1,20 @@
+# Usar Node.js como base
+FROM node:20
+
+# Crear el directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiar package.json y package-lock.json del backend
+COPY ./backend/package*.json ./
+
+# Instalar las dependencias del backend
+RUN npm install --force
+
+# Copiar el código fuente del backend
+COPY ./backend .
+
+# Exponer el puerto 3000 para el backend
+EXPOSE 3000
+
+# Comando para iniciar el backend
+CMD ["npm", "start"]

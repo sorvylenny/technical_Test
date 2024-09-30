@@ -1,0 +1,88 @@
+.container {
+  max-width: 700px;
+}
+
+.card {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.card-header {
+  border: 1px solid white;
+}
+
+.button-delete {
+  font-size: 0.65rem;
+  padding: 4px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+
+  .card {
+    border: 2px solid white;
+    padding: 1rem;
+  }
+
+  .card-header {
+    font-size: 1.5rem;
+    border: 2px solid white;
+    padding: 0.5rem;
+  }
+
+  .button-delete {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .form-control {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 900px;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    font-size: 1.75rem;
+  }
+
+  .form-control {
+    font-size: 1.2rem;
+  }
+
+  .form-label {
+    font-size: 1.25rem;
+  }
+
+  button {
+    font-size: 1.15rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+  }
+
+  .button-delete {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
