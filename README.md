@@ -1,5 +1,6 @@
 
 
+PRUEBA TECNICA VELAIO
 
 - **`backend/`**: En esta carpeta contiene todo el código del backend, desarrollado en Node.js. Aquí es donde sucede toda la lógica de la aplicación y se gestionan los datos, encargado de procesar y responder a las solicitudes que llegan desde el frontend.
 
