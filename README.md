@@ -20,7 +20,7 @@ Antes de ejecutar el proyecto, asegúrate de tener instalados:
 1. **Clona este repositorio**:
 
    ```bash
-   git clone https://github.com/sorvylenny/Task-TestApp
+   git clone https://github.com/sorvylenny/technical_Test
 
 2. **Navega al directorio del proyecto**:
    ```

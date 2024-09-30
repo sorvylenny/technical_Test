@@ -53,7 +53,7 @@ Este proyecto utiliza las siguientes dependencias:
 Para ejecutar este proyecto localmente, sigue los siguientes pasos:
 
 1. Asegúrate de tener instalado [Node.js](https://nodejs.org/) y [Angular CLI](https://github.com/angular/angular-cli).
-2. Clona este repositorio en tu máquina local: (`https://github.com/sorvylenny/Task-TestApp`)
+2. Clona este repositorio en tu máquina local: (`https://github.com/sorvylenny/technical_Test`)
 3. Navega a la carpeta del proyecto y ejecuta `npm install` para instalar las dependencias.
 4. Una vez completada la instalación, ejecuta `ng serve` para iniciar el servidor de desarrollo.
 5. Abre tu navegador y visita `http://localhost:4200/` para ver la aplicación
